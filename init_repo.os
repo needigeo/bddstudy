@@ -19,7 +19,7 @@
     ЗапуститьПриложение("git config --local merge.ours.driver true",,Истина);
     ЗапуститьПриложение( "git remote add vanessa-bootstrap https://github.com/silverbulleters/vanessa-bootstrap.git",,Истина);   
 
-
+	//Добавление прекомита
 	УстановитьТекущийКаталог("hooks");
     Приемник = ТекущийКаталог();
 
@@ -31,6 +31,7 @@
     ЗапуститьПриложение("xcopy "+КаталогПрекомит+"\8files-extractor.os "+Приемник+" /Y /F",,Истина);
     СоздатьКаталог("tools");
     ЗапуститьПриложение("xcopy "+КаталогПрекомит+"\tools\v8unpack.exe "+Приемник+"\tools\ /Y /F",,Истина);
+    //Получение bootstrap
 	УстановитьТекущийКаталог(КаталогРепозитария);
     ЗапуститьПриложение( "git pull --no-tags --no-commit vanessa-bootstrap master",,Истина);   
 
